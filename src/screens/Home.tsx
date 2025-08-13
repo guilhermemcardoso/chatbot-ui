@@ -12,7 +12,7 @@ export default function HomeScreen() {
     const [input, setInput] = useState('');
 
     useEffect(() => {
-        socket = io('http://localhost:3000');
+        socket = io(process.env.NEXT_PUBLIC_API_URL);
 
         socket.on('message', (msg: string) => {
             setMessages((prev) => [...prev, { text: msg, sender: 'bot' }]);
