@@ -27,7 +27,7 @@ export default function Message({ text, sender }: MessageProps) {
                 </pre>
             );
         },
-        a: ({ node, ...props }: any) => (
+        a: ({ ...props }: any) => (
             <a
                 className="text-blue-600 underline"
                 target="_blank"
